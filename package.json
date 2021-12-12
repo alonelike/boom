@@ -1,0 +1,22 @@
+{
+  "name": "boom",
+  "version": "1.0.0",
+  "description": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alonelike/boom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alonelike/boom/issues"
+  },
+  "homepage": "https://github.com/alonelike/boom#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
