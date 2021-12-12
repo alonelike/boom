@@ -9,3 +9,4 @@ node() {
           checkout scm
        }
 }
+}
