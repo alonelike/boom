@@ -1,0 +1,25 @@
+node() {
+
+    currentBuild.result = "SUCCESS"
+
+    try {
+
+       stage('Checkout'){
+
+          checkout scm
+       }
+      stage('Build and Push'){
+      docker.withRegistry('credentials-id') {
+
+        def customImage = docker.build("836599/venkisample:${env.BUILD_ID}")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
+     }
+  }
+}
+    catch (err) }
+                currentBuild.result = "FAILURE"
+                 throw err
+      }
+}
