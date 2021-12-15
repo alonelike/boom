@@ -10,7 +10,7 @@ node() {
           checkout scm
        }
       stage('Build and Push'){
-      docker.withRegistry('credentials-id') {
+      docker.withRegistry('https://registry.hub.docker.com', 'dockerid') {
 
         def customImage = docker.build("836599/venkisample:${env.BUILD_ID}")
 
