@@ -13,10 +13,7 @@ node() {
       stage('Build and Push'){
       docker.withRegistry('credentials-id') {
 
-        def customImage = docker.build("836599/venkisample:${env.BUILD_ID}")
-
-        /* Push the container to the custom Registry */
-        customImage.push()
+         docker.build("836599/venkisample:${env.BUILD_ID}").push()
      }
   }
 }
