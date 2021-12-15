@@ -17,7 +17,7 @@ node() {
           docker tag 836599/venkisample:${env.BUILD_ID} 836599/venkisample:${env.BUILD_ID}
           docker push 836599/venkisample:${env.BUILD_ID}
           '''
-//       docker.withRegistry('https://registry.hub.docker.com', 'credentials-id') {
+//       docker.withRegistry('https://registry.hub.docker.com', 'dockerid') {
 
 //          docker.build("836599/venkisample:${env.BUILD_ID}").push()
           }
